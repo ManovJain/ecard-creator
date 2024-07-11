@@ -1,0 +1,36 @@
+.control-panel {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  button {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  button {
+    background-color: #3477B9;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  button:hover {
+    background: #000000;
+  }
+  
+  button + button {
+    margin-left: 10px;
+  }
+  

@@ -1,0 +1,9 @@
+<div class="gallery-overlay" (click)="onClose()">
+  <div class="gallery-container" (click)="$event.stopPropagation()">
+    <span class="close-icon" (click)="onClose()">×</span>
+    <h2>Select an Image</h2>
+    <div class="gallery">
+      <img *ngFor="let image of images" [src]="image" (click)="selectImage(image)" class="gallery-image">
+    </div>
+  </div>
+</div>

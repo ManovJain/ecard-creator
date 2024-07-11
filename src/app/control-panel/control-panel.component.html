@@ -1,0 +1,23 @@
+<div class="control-panel">
+  <div class="form-group">
+    <input type="text" placeholder="Enter text" [(ngModel)]="newText">
+    <button (click)="addText()">Add Text</button>
+  </div>
+  <div class="form-group">
+    <input type="number" placeholder="Donation Amount" [(ngModel)]="donationAmount">
+  </div>
+  <div class="form-group">
+    <input type="file" (change)="uploadImage($event)">
+    <button (click)="selectFromGallery()">Select from Gallery</button>
+  </div>
+  <div class="form-group">
+    <input type="email" placeholder="Recipient Email" [(ngModel)]="recipientEmail">
+    <button (click)="sendEmail()">Send via Email</button>
+  </div>
+  <div class="form-group">
+    <button (click)="shareOnSocialMedia()">Share on Social Media</button>
+  </div>
+  <app-social-media-buttons></app-social-media-buttons>
+
+  <app-gallery *ngIf="showGallery" (close)="closeGallery()" (imageSelected)="selectImageFromGallery($event)"></app-gallery>
+</div>
